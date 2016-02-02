@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/robbiehanson/CocoaHTTPServer"
   s.license          = 'BSD'
   s.author           = { "Robbie Hanson" => "cocoahttpserver@googlegroups.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CocoaHTTPServer.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/pplant/CocoaHTTPServer.git", :tag => s.version.to_s }
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 

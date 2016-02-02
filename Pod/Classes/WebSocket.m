@@ -320,6 +320,11 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	return location;
 }
 
+- (NSString *)protocolResponseHeaderValue {
+    NSString *key = [request headerField: @"Sec-WebSocket-Protocol"];
+    return key;
+}
+
 - (NSString *)secWebSocketKeyResponseHeaderValue {
 	NSString *key = [request headerField: @"Sec-WebSocket-Key"];
 	NSString *guid = @"258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
@@ -394,13 +399,16 @@ static inline NSUInteger WS_PAYLOAD_LENGTH(UInt8 frame)
 	
 	NSString *originValue = [self originResponseHeaderValue];
 	NSString *locationValue = [self locationResponseHeaderValue];
+    NSString *protocolValue = [self protocolResponseHeaderValue];
 	
 	NSString *originField = isVersion76 ? @"Sec-WebSocket-Origin" : @"WebSocket-Origin";
 	NSString *locationField = isVersion76 ? @"Sec-WebSocket-Location" : @"WebSocket-Location";
+    NSString *protocolField = @"Sec-WebSocket-Protocol";
 	
 	[wsResponse setHeaderField:originField value:originValue];
 	[wsResponse setHeaderField:locationField value:locationValue];
-	
+	[wsResponse setHeaderField:protocolField value:protocolValue];
+    
 	NSString *acceptValue = [self secWebSocketKeyResponseHeaderValue];
 	if (acceptValue) {
 		[wsResponse setHeaderField: @"Sec-WebSocket-Accept" value: acceptValue];

@@ -1,0 +1,14 @@
+PODS:
+  - CocoaHTTPServer (0.1.0)
+
+DEPENDENCIES:
+  - CocoaHTTPServer (from `../`)
+
+EXTERNAL SOURCES:
+  CocoaHTTPServer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaHTTPServer: bd0bd34ecc86f31e45c9db10fb89c1adf495edc5
+
+COCOAPODS: 0.39.0

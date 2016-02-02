@@ -1,0 +1,25 @@
+{
+  "name": "CocoaHTTPServer",
+  "version": "0.1.0",
+  "summary": "A short description of CocoaHTTPServer.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CocoaHTTPServer",
+  "license": "MIT",
+  "authors": {
+    "pplant": "plant.peter.bz@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CocoaHTTPServer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "CocoaHTTPServer": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

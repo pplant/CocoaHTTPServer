@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "CocoaHTTPServer"
-  s.version          = "2.3-vl"
+  s.version          = "2.4-vl"
   s.summary          = "A small, lightweight, embeddable HTTP server for Mac OS X or iOS applications."
 
   s.homepage         = "https://github.com/robbiehanson/CocoaHTTPServer"
